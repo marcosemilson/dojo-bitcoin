@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.npmrc
+.env
+
+# Editor config
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+
+# Logs
+logs/
+
+# Deployment
+dist/
+
+# Testing
+coverage/
+
+# Local environment settings
+config/local.env.js

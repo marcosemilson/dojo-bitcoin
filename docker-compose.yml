@@ -1,0 +1,60 @@
+// Arquivo: docker-compose.yml
+
+version: '3.8'
+
+services:
+  bitcoin-node:
+    image: ruimarinho/bitcoin-core
+    container_name: bitcoin-node
+    ports:
+      - "18443:18443"
+      - "18444:18444"
+    volumes:
+      - bitcoin-data:/root/.bitcoin
+    environment:
+      BITCOIN_NETWORK: regtest
+      BITCOIN_RPCUSER: user
+      BITCOIN_RPCPASSWORD: pass
+      BITCOIN_EXTRA_ARGS: "-server -txindex -rpcallowip=0.0.0.0/0 -rpcbind=0.0.0.0"
+
+  redis:
+    image: redis:latest
+    container_name: redis-cache
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: block_explorer
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend
+    container_name: backend
+    ports:
+      - "5000:5000"
+    environment:
+      REDIS_HOST: redis-cache
+      POSTGRES_HOST: postgres-db
+      BITCOIN_RPC_HOST: bitcoin-node
+      BITCOIN_RPC_USER: user
+      BITCOIN_RPC_PASS: pass
+    depends_on:
+      - bitcoin-node
+      - redis
+      - postgres
+
+volumes:
+  bitcoin-data:
+  redis-data:
+  postgres-data:
