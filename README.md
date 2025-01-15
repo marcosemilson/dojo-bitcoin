@@ -1,4 +1,4 @@
-# API Bitcoin Core
+# API Bitcoin Explorer
 
 ## Descrição
 Esta é uma API Node.js para interagir com o Bitcoin Core, permitindo acesso a funcionalidades como consulta de blocos, transações e endereços. A API é projetada para facilitar a integração com o Bitcoin Core, utilizando a biblioteca `bitcoin-core` para se comunicar com um nó Bitcoin.
