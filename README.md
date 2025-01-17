@@ -186,6 +186,6 @@ Contribuições são bem-vindas! Siga os passos abaixo:
 ## Licença
 
 📚 Um Projeto de Aprendizagem :
-Este projeto é parte da nossa jornada de aprendizagem no DOJO BITCOIN promovido pela [Nearx Innovation School](https://nearx.com.br/pt/home), com o objetivo de explorar e entender o desenvolvimento full-stack. alinhado ao aprendizado de Blockchain e o BitCoin Ele não se destina ao uso em produção e não deve ser usado para fins críticos ou comerciais. Em vez disso, ele serve como uma plataforma para experimentação, desenvolvimento de habilidades e colaboração.
+Este projeto é parte da nossa jornada de aprendizagem no DOJO BITCOIN promovido pela [Nearx Innovation School](https://nearx.com.br/pt/home), com o objetivo de explorar e entender o desenvolvimento full-stack, alinhado ao aprendizado de Blockchain e o BitCoin Ele não se destina ao uso em produção e não deve ser usado para fins críticos ou comerciais. Em vez disso, ele serve como uma plataforma para experimentação, desenvolvimento de habilidades e colaboração.
 
 Essa jornada nos permitiu mergulhar em novas tecnologias, superar desafios e aumentar nossa expertise. É emocionante ver o quão longe chegamos e o tremendo potencial para nosso futuro com este projeto.
